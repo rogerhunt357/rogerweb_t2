@@ -1,0 +1,36 @@
+.logo {
+    display: block;
+    font-size: 0;
+    white-space: nowrap;
+    font-weight: 800;
+    color: var(--white-c);
+    line-height: 1;
+    padding: 3px;
+    border-radius: 4px;
+
+    > {
+        span:first-child {
+            font-size: 24px;
+            color: var(--white-c);
+
+            & span {
+                @include media(mobile) {
+                    display: none;
+                }
+            }
+        }
+
+        span:last-child {
+            text-transform: uppercase;
+            font-size: 24px;
+            color: var(--active-c);
+
+            & span {
+                @include media(mobile-small) {
+                    display: none;
+                }
+            }
+        }
+
+    }
+}
